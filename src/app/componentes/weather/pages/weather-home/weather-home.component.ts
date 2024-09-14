@@ -10,9 +10,8 @@ import { WeatherDatas } from '../../../../../models/interfaces/WeatherDatas';
   styleUrls: [],
 })
 export class WeatherHomeComponent implements OnInit, OnDestroy {
-
   private readonly destroy$: Subject<void> = new Subject();
-  initialCityName = 'São Paulo';
+  initialCityName = 'Angatuba';
   weatherDatas!: WeatherDatas;
   searchIcon = faMagnifyingGlass;
 
@@ -37,7 +36,6 @@ export class WeatherHomeComponent implements OnInit, OnDestroy {
 
   onSubmit(): void {
     this.getWheatherDatas(this.initialCityName);
-    console.log('CHAMOU A FUNÇÃO');
     this.initialCityName = '';
   }
 
